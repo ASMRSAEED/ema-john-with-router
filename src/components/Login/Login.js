@@ -30,7 +30,7 @@ const Login = () => {
 
     const handleUserSignIn = event => {
         event.preventDefault();
-        signInWithEmailAndPassword(email, password)
+        signInWithEmailAndPassword(email, password);
     }
 
     return (

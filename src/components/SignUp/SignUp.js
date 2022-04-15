@@ -8,7 +8,7 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
 
@@ -36,7 +36,8 @@ const SignUp = () => {
             return;
         }
         if (password.length < 6) {
-            setError('Password Must Be 6 Character or Longer')
+            setError('Password Must Be 6 Character or Longer');
+            return;
         }
 
         createUserWithEmailAndPassword(email, password);
